@@ -196,6 +196,7 @@ if __name__ == '__main__':
     input_dir = Path(opt.input_dir)
     print('Looking for data in directory \"{}\"'.format(input_dir))
     output_dir = Path(opt.output_dir)
+    print(f"creating output directory: {output_dir}")
     output_dir.mkdir(exist_ok=True, parents=True)
     print('Will write matches to directory \"{}\"'.format(output_dir))
     if opt.eval:
