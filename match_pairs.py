@@ -52,8 +52,8 @@ import matplotlib.cm as cm
 import torch
 
 
-from models.matching import Matching
-from models.utils import (compute_pose_error, compute_epipolar_error,
+from SuperGluePretrainedNetwork.models.matching import Matching
+from SuperGluePretrainedNetwork.models.utils import (compute_pose_error, compute_epipolar_error,
                           estimate_pose, make_matching_plot,
                           error_colormap, AverageTimer, pose_auc, read_image,
                           rotate_intrinsics, rotate_pose_inplane,
@@ -196,7 +196,6 @@ if __name__ == '__main__':
     input_dir = Path(opt.input_dir)
     print('Looking for data in directory \"{}\"'.format(input_dir))
     output_dir = Path(opt.output_dir)
-    print(f"creating output directory: {output_dir}")
     output_dir.mkdir(exist_ok=True, parents=True)
     print('Will write matches to directory \"{}\"'.format(output_dir))
     if opt.eval:
